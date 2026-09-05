@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "warden"
+version = "0.1.0"
+description = "MAD agent runtime monitor"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "click>=8.0",
+  "rich>=13.0",
+]
+
+[project.scripts]
+warden = "warden_app.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
